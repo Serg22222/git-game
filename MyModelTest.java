@@ -122,13 +122,6 @@ public class MyModelTest extends ApplicationAdapter  {
 
 	}
 
-	final Vector3 position = new Vector3();
-	private boolean isVisible(PerspectiveCamera cam, ModelInstance instance) {
-		instance.transform.getTranslation(position);
-		BoundingBox box = instance.calculateBoundingBox(new BoundingBox());
-		return cam.frustum.boundsInFrustum(position, box.getDimensions());
-
-	}
 
 	@Override
 	public void dispose() {
